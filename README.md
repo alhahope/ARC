@@ -63,46 +63,48 @@ To see all options for ARC, use the `-help` argument:
     java -cp *:lib/* edu.wisc.cs.arc.Driver -help
 
 The `projects/arc/scripts/` directory contains a variety of scripts that can aid in running ARC over many networks and parsing ARC's output.
-java -cp *:lib/* edu.wisc.cs.arc.Driver -help
-usage: etggenerator [-allflows] [-anon] [-baseonly] -configs <DIR>
-       [-descriptions] [-graphs <DIR>] [-help] [-interface]
-       [-internalonly] [-minhosts <SIZE>] [-noprune] [-parallelize]
-       [-routersonly] [-serialize <FILE>] [-summarize] [-t] [-vab] [-vai]
-       [-vall] [-var <K>] [-vcb] [-veq <FILE>] [-virl <FILE>] [-vpaths
-       <FILE>] [-warn]
- -allflows           Include the entire flowspace as a policy group
- -anon               Anonymize output
- -baseonly           Only generate base ETG
- -configs <DIR>      Directory containing configuration files
- -descriptions       Construct the device-based ETG based on interface
-                     descriptions in device configurations
- -graphs <DIR>       Generate graph files in DIR
- -help               Print usage information
- -interface          Convert process-based ETGs to interface-based ETGs
- -internalonly       Only include internal policy groups
- -minhosts <SIZE>    Ignore policy groups which have no more than SIZE
-                     hosts
- -noprune            Skip pruning of ETGs
- -parallelize        Generate and verify ETGs in parallel
- -routersonly        Only include devices that containing router stanzas
- -serialize <FILE>   Serialize ETGs to FILE
- -summarize          Only output a summary of verification results
- -t                  Output per-flow (pair) verification times information
- -vab                Verify always blocked
- -vai                Verify always isolated
- -vall               Run all verifiers
- -var <K>            Verify always reachable under less than K failures
- -vcb                Verify currently blocked
- -veq <FILE>         Verify ETGs for the specified configurations are
-                     equivalent to the serialized ETGs stored in FILE
- -virl <FILE>        Generate a Cisco Virtual Internet Routing Lab (VIRL)
-                     in FILE
- -vpaths <FILE>      Verify paths computed using ETGs are equivalent to
-                     paths computed using output from Parse Cisco Virtual
-                     Internet Routing Lab (VIRL) stored in FILE
- -warn               Output a warning when an assumption is violated
-                     during ETG construction, rather than ending the
-                     process with an error
+
+    java -cp *:lib/* edu.wisc.cs.arc.Driver -help
+    usage: etggenerator [-allflows] [-anon] [-baseonly] -configs <DIR>
+           [-descriptions] [-graphs <DIR>] [-help] [-interface]
+           [-internalonly] [-minhosts <SIZE>] [-noprune] [-parallelize]
+           [-routersonly] [-serialize <FILE>] [-summarize] [-t] [-vab] [-vai]
+           [-vall] [-var <K>] [-vcb] [-veq <FILE>] [-virl <FILE>] [-vpaths
+           <FILE>] [-warn]
+
+     -allflows           Include the entire flowspace as a policy group
+     -anon               Anonymize output
+     -baseonly           Only generate base ETG
+     -configs <DIR>      Directory containing configuration files
+     -descriptions       Construct the device-based ETG based on interface
+                         descriptions in device configurations
+     -graphs <DIR>       Generate graph files in DIR
+     -help               Print usage information
+     -interface          Convert process-based ETGs to interface-based ETGs
+     -internalonly       Only include internal policy groups
+     -minhosts <SIZE>    Ignore policy groups which have no more than SIZE
+                         hosts
+     -noprune            Skip pruning of ETGs
+     -parallelize        Generate and verify ETGs in parallel
+     -routersonly        Only include devices that containing router stanzas
+     -serialize <FILE>   Serialize ETGs to FILE
+     -summarize          Only output a summary of verification results
+     -t                  Output per-flow (pair) verification times information
+     -vab                Verify always blocked
+     -vai                Verify always isolated
+     -vall               Run all verifiers
+     -var <K>            Verify always reachable under less than K failures
+     -vcb                Verify currently blocked
+     -veq <FILE>         Verify ETGs for the specified configurations are
+                         equivalent to the serialized ETGs stored in FILE
+     -virl <FILE>        Generate a Cisco Virtual Internet Routing Lab (VIRL)
+                         in FILE
+     -vpaths <FILE>      Verify paths computed using ETGs are equivalent to
+                         paths computed using output from Parse Cisco Virtual
+                         Internet Routing Lab (VIRL) stored in FILE
+     -warn               Output a warning when an assumption is violated
+                         during ETG construction, rather than ending the
+                         process with an error
 
                      
 Generating FAT Tree Topology
